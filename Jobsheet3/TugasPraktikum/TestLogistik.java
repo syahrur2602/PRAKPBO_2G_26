@@ -1,7 +1,11 @@
 package Jobsheet3.TugasPraktikum;
 
+import java.util.Scanner;
+
 public class TestLogistik {
     public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
 
         Kontainer kontainerA1 =
                 new Kontainer("REQ-9988", "PT. Maju Bersama", 5000);
@@ -12,24 +16,38 @@ public class TestLogistik {
         System.out.println("Kapasitas Maksimal: "
                 + kontainerA1.getKapasitasMaksimal() + " kg");
 
-        System.out.println("\nMemasukkan muatan baru seberat 6.000 kg...");
-        kontainerA1.tambahMuatan(6000);
+        System.out.print("\nMasukkan berat muatan yang akan dimasukkan: ");
+        double beratMasuk = sc.nextDouble();
+
+        kontainerA1.tambahMuatan(beratMasuk);
+
         System.out.println("Berat muatan saat ini: "
                 + kontainerA1.getBeratMuatanSaatIni() + " kg");
 
-        System.out.println("\nMemasukkan muatan baru seberat 4.000 kg...");
-        kontainerA1.tambahMuatan(4000);
+        System.out.print("\nMasukkan berat muatan yang akan dimasukkan: ");
+        beratMasuk = sc.nextDouble();
+
+        kontainerA1.tambahMuatan(beratMasuk);
+
         System.out.println("Berat muatan saat ini: "
                 + kontainerA1.getBeratMuatanSaatIni() + " kg");
 
-        System.out.println("\nMembongkar muatan sebesar 500 kg...");
-        kontainerA1.turunkanMuatan(500);
+        System.out.print("\nMasukkan berat muatan yang akan dibongkar: ");
+        double beratBongkar = sc.nextDouble();
+
+        kontainerA1.turunkanMuatan(beratBongkar);
+
         System.out.println("Berat muatan saat ini: "
                 + kontainerA1.getBeratMuatanSaatIni() + " kg");
 
-        System.out.println("\nMembongkar muatan sebesar 1.500 kg...");
-        kontainerA1.turunkanMuatan(1500);
+        System.out.print("\nMasukkan berat muatan yang akan dibongkar: ");
+        beratBongkar = sc.nextDouble();
+
+        kontainerA1.turunkanMuatan(beratBongkar);
+
         System.out.println("Berat muatan saat ini: "
                 + kontainerA1.getBeratMuatanSaatIni() + " kg");
+
+        sc.close();
     }
 }
