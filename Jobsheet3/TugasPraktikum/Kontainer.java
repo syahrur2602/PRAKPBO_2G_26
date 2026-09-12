@@ -38,7 +38,7 @@ public class Kontainer {
     }
 
     public void turunkanMuatan(double berat) {
-        if (berat <= beratMuatanSaatIni) {
+        if (berat <= beratMuatanSaatIni * 0.5) {
             beratMuatanSaatIni -= berat;
         } else {
             System.out.println("Maaf, berat muatan yang diturunkan melebihi muatan saat ini.");
