@@ -17,8 +17,8 @@ public class EncapDemo {
     }
 
     public void setAge(int newAge) {
-        if (newAge > 30) {
-            age = 30;
+        if (newAge < 18 || newAge > 30) {
+            System.out.println("Usia minimal 18 tahun & maksimal 30 tahun!");
         } else {
             age = newAge;
         }
