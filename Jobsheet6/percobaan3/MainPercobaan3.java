@@ -9,7 +9,7 @@ public class MainPercobaan3 {
         tabung.setSuperR(10);
         tabung.setT(3);
         tabung.volume();
-
+        tabung.cekR();
     }
     
 }
