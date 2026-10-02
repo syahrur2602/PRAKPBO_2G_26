@@ -4,7 +4,7 @@ public class Tabung extends Bangun{
     protected int t;
 
     public void setSuperPhi(double phi) {
-        super.phi = phi;
+        this.phi = phi;
     }
 
     public void setSuperR(int r) {
@@ -16,6 +16,6 @@ public class Tabung extends Bangun{
     }
 
     public void volume() {
-        System.out.println("Volume Tabung adalah: " + (super.phi * super.r * super.r * this.t));
+        System.out.println("Volume Tabung adalah: " + (this.phi * super.r * super.r * this.t));
     }
 }
