@@ -4,6 +4,11 @@ public class Kucing {
     private String nama;
     private int umur;
 
+    public Kucing() {
+        this("Tanpa Nama");
+        System.out.println("Konstruktor 0 parameter selesai");
+    }
+
     public Kucing(String nama) {
         this(nama, 1);
         System.out.println("Konstruktor 1 parameter selesai");
